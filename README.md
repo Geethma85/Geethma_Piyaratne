@@ -1,16 +1,45 @@
-# React + Vite
+# Personal Portfolio — Geethma Piyaratne
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio website built with **React**, **Vite**, and **Tailwind CSS**. Designed to showcase software engineering projects, technical skill sets, leadership experience, and academic background.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
+- **Portfolio:**
+- **LinkedIn:** [linkedin.com/in/geethma-piyaratne](https://www.linkedin.com/in/geethma-piyaratne)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack & Tools
 
-## Expanding the ESLint configuration
+* **Frontend:** React 19, Vite, Tailwind CSS
+* **Icons:** React Icons (`react-icons`)
+* **Languages & Core:** JavaScript (ES6+), HTML5, CSS3
+* **Deployment:** GitHub Pages / Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+* **Responsive Design:** Optimized across mobile, tablet, and desktop viewports.
+* **Modern Dark UI:** Glassmorphism accents, smooth gradients, and Tailwind-based aesthetic.
+* **Interactive Project Showcase:** Filter projects by category (Frontend, Backend, Fullstack).
+* **Certificate Carousel:** Custom interactive carousel to display technical certifications.
+* **Featured Projects:** Highlights full-stack applications like **Emora** (Emotion-based music recommendation).
+* **Leadership & Community:** Dedicated section covering IEEE and Rotaract leadership initiatives.
+
+---
+
+## 📂 Project Structure
+
+```text
+├── public/              # Static assets (images, icons)
+│   └── images/
+├── src/
+│   ├── App.jsx          # Main portfolio component
+│   ├── index.css        # Tailwind directives & global styling
+│   └── main.jsx         # React application entry point
+├── index.html           # HTML template
+├── tailwind.config.js   # Tailwind CSS configuration
+├── vite.config.js       # Vite configuration
+└── package.json         # Project dependencies and build scripts
