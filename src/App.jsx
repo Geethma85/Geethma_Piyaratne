@@ -13,10 +13,12 @@ export default function App() {
   const [currentCert, setCurrentCert] = useState(0);
 
   const certificates = [
-    { img: "/images/py1.png", title: "Python Programming" },
+    { img: "/images/Python_for_beginners_UOM.jpg", title: "Python Programming for Beginners" },
+    { img: "/images/Python_Programming_E-Certificate.jpg", title: "Python Programming 2" },
     { img: "/images/webdev.png", title: "Web Development" },
-    { img: "/images/angular.png", title: "Angular Framework" },
-    { img: "/images/pmmora.png", title: "Professional Development" }
+    { img: "/images/GenAI.jpg", title: "Career Essentials in Generative AI" },
+    { img: "/images/Py_DS.jpg", title: "Python Data Structures" }
+
   ];
 
   const prevCert = () => {
@@ -40,7 +42,7 @@ export default function App() {
       icon: "/images/emoralogo.png",
       desc: "Capstone project integrating facial emotion analysis with streaming APIs to generate personalized playlists dynamically. Built with Flutter, Flask, Firebase with OpenCV and DeepFace.",
       link: "#",
-      github: "https://github.com/Geethma85"
+      github: "https://github.com/niruban-codes/Emora"
     },
     {
       title: "Online Learning Platform",
@@ -53,6 +55,15 @@ export default function App() {
       title: "Portfolio Website",
       category: "Frontend",
       desc: "A personal portfolio built using React, Vite, and Tailwind CSS to showcase academic progress, practical skills, and software engineering projects.",
+      link: "#",
+      github: "https://github.com/Geethma85/Geethma_Piyaratne"
+    },
+
+    {
+      title: "UniAssist",
+      category: "Fullstack",
+      icon: "/images/logoremove.png", // (Optional: add icon in public/images/)
+      desc: "A university assistant platform designed to streamline student workflows, resource management, and academic collaboration.",
       link: "#",
       github: "https://github.com/Geethma85"
     }
