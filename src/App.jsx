@@ -14,6 +14,8 @@ export default function App() {
   const [isLight, setIsLight] = useState(false);
 
   const [currentCert, setCurrentCert] = useState(0);
+  const [formData, setFormData] = useState({ email: '', message: '' });
+  const [status, setStatus] = useState('idle');
 
   const certificates = [
     { img: "/images/Python_for_beginners_UOM.jpg", title: "Python Programming for Beginners" },
@@ -30,6 +32,39 @@ export default function App() {
 
   const nextCert = () => {
     setCurrentCert((prev) => (prev === certificates.length - 1 ? 0 : prev + 1));
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('sending');
+  
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          subject: 'New message from your portfolio',
+          from_name: 'Portfolio Contact Form',
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+      const data = await res.json();
+  
+      if (data.success) {
+        setStatus('success');
+        setFormData({ email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (err) {
+      setStatus('error');
+    }
   };
 
   const interests = [
@@ -525,29 +560,45 @@ export default function App() {
           </div>
 
           {/* Contact Form */}
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="block text-sm font-medium text-neutral-300 mb-1">Email</label>
-              <input 
-                type="email" 
-                placeholder="name@gmail.com" 
-                className="w-full px-4 py-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-100 focus:outline-none focus:border-purple-500" 
+              <input
+                type="email"
+                name="email"
+                required
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="name@gmail.com"
+                className="w-full px-4 py-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-100 focus:outline-none focus:border-purple-500"
               />
             </div>
             <div>
               <label className="block text-sm font-medium text-neutral-300 mb-1">Message</label>
-              <textarea 
-                rows="4" 
-                placeholder="Your message here..." 
-                className="w-full px-4 py-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-100 focus:outline-none focus:border-purple-500" 
+              <textarea
+                rows="4"
+                name="message"
+                required
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Your message here..."
+                className="w-full px-4 py-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-100 focus:outline-none focus:border-purple-500"
               ></textarea>
             </div>
-            <button 
-              type="submit" 
-              className="w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium transition-colors"
+            <button
+              type="submit"
+              disabled={status === 'sending'}
+              className="w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-500 disabled:opacity-60 text-white font-medium transition-colors"
             >
-              Send Message
+              {status === 'sending' ? 'Sending...' : 'Send Message'}
             </button>
+
+            {status === 'success' && (
+              <p className="text-green-400 text-sm">Thanks! Your message has been sent.</p>
+            )}
+            {status === 'error' && (
+              <p className="text-red-400 text-sm">Something went wrong. Please try again.</p>
+            )}
           </form>
         </div>
 
