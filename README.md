@@ -5,7 +5,7 @@ A modern, responsive personal portfolio website built with **React**, **Vite**, 
 ---
 
 ## 🚀 Live Demo
-- **Portfolio:**
+- **Portfolio:** https://geethma-piyaratne.vercel.app/
 - **LinkedIn:** [linkedin.com/in/geethma-piyaratne](https://www.linkedin.com/in/geethma-piyaratne)
 
 ---
