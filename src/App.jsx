@@ -17,11 +17,11 @@ export default function App() {
 
   const certificates = [
     { img: "/images/Python_for_beginners_UOM.jpg", title: "Python Programming for Beginners" },
+    { img: "/images/Py_DS.jpg", title: "Python Data Structures" },
     { img: "/images/Python_Programming_E-Certificate.jpg", title: "Python Programming 2" },
-    { img: "/images/webdev.png", title: "Web Development" },
     { img: "/images/GenAI.jpg", title: "Career Essentials in Generative AI" },
-    { img: "/images/Py_DS.jpg", title: "Python Data Structures" }
-
+    { img: "/images/webdev.png", title: "Web Development" },
+    { img: "/images/DeppLearning AI - AI for everyone Coursera Q9CSBFX4RZPQ_page-0001.jpg", title: "AI for Everyone" }
   ];
 
   const prevCert = () => {
