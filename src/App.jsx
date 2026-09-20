@@ -500,7 +500,7 @@ export default function App() {
                 <h3 className={`font-semibold text-lg ${isLight ? 'text-neutral-900' : 'text-white'}`}>IEEE WIE Hope 2.0</h3>
                 <p className="text-purple-500 text-sm font-medium mb-2">Volunteer Instructor</p>
                 <p className={`text-sm leading-relaxed ${isLight ? 'text-neutral-900' : 'text-neutral-400'}`}>
-                  Facilitated school teaching sessions introducing young students to foundational computer programming.
+                  Actively facilitated school teaching sessions introducing young students to foundational computer programming series.
                 </p>
               </div>
             </div>
@@ -516,7 +516,7 @@ export default function App() {
           <div>
             <h2 className="text-3xl font-bold text-white mb-4">Let's Connect</h2>
             <p className="text-neutral-400 mb-8 max-w-md">
-            I’m always open to connecting with fellow developers, tech enthusiasts, and professionals. Whether it’s to share ideas, collaborate, learn from each other, or simply have a conversation about technology, feel free to reach out — let’s connect!
+            Interested in connecting with fellow developers, tech enthusiasts, and professionals. Whether it’s to share ideas, collaborate, or learn from each other, feel free to reach out. Let’s connect!
             </p>
             <div className="flex gap-4 text-2xl text-neutral-400">
               <a href="https://www.linkedin.com/in/geethma-piyaratne" target="_blank" rel="noreferrer" className="hover:text-purple-400 transition-colors"><FaLinkedin /></a>
