@@ -174,12 +174,18 @@ export default function App() {
 
             </div>
             <div className="pt-4 flex flex-wrap justify-center md:justify-start gap-4">
-              <a href="#projects" className="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium shadow-lg shadow-purple-900/30 transition-all">
-                Explore Projects
+              <a 
+                href="/CV_SE_Geethma_Piyaratne.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium shadow-lg shadow-purple-900/30 transition-all inline-flex items-center gap-2"
+              >
+                <span>Download CV</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V3" />
+                </svg>
               </a>
-              <a href="#contact" className={`px-6 py-3 rounded-xl border hover:border-purple-500 font-medium transition-all ${
-                isLight ? 'border-neutral-300 text-neutral-700' : 'border-neutral-700 text-neutral-300'
-              }`}>
+              <a href="#contact" className="px-6 py-3 rounded-xl border border-neutral-700 hover:border-purple-500 text-neutral-300 font-medium transition-all">
                 Get in Touch
               </a>
             </div>
